@@ -1,7 +1,7 @@
 {
-  "name": "lab1",
+  "name": "web",
   "version": "1.0.0",
-  "description": "Node.js project with ESLint, Prettier and serve.",
+  "description": "Web Engineering labs – each lab lives in public/labN",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
