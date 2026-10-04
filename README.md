@@ -10,10 +10,10 @@ inside `public/`.
 web/
 ├── public/                 ← everything the browser loads
 │   ├── lab1/               ← Lab 01: index.html, script.js, styles.css
-│   └── lab2/               ← Lab 02 … one folder per lab
+│   ├── lab2/               ← Lab 02 … one folder per lab
+│   └── prac/               ← practice page with button click events
 ├── tests/
 │   └── lab1/               ← automated tests for each lab
-├── practice-project/       ← practice page with button click events
 ├── package.json            ← shared scripts and dev dependencies
 ├── eslint.config.js        ← ESLint rules for all labs
 └── .prettierrc             ← Prettier settings for all labs
