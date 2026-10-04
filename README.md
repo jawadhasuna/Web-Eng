@@ -1,7 +1,6 @@
 # Web Engineering lab work – Jawad Hassan
 
 Each lab is a self-contained Node.js project in its own folder.
-|
 
 ## Running a lab
 
