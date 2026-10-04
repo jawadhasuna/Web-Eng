@@ -9,9 +9,9 @@ inside `public/`.
 ```
 web/
 ├── public/                 ← everything the browser loads
+│   ├── lab0/               ← practice page with button click events
 │   ├── lab1/               ← Lab 01: index.html, script.js, styles.css
-│   ├── lab2/               ← Lab 02 … one folder per lab
-│   └── prac/               ← practice page with button click events
+│   └── lab2/               ← Lab 02 … one folder per lab
 ├── tests/
 │   └── lab1/               ← automated tests for each lab
 ├── package.json            ← shared scripts and dev dependencies
