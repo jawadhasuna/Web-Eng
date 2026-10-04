@@ -1,10 +1,7 @@
-const { test } = require("node:test");
+const test = require("node:test");
 const assert = require("node:assert");
+const { greet } = require("../public/script.js");
 
-function greet(name) {
-  return `Hello, ${name}!`;
-}
-
-test("greet returns correct greeting", () => {
+test('greet("World") returns "Hello, World!"', () => {
   assert.strictEqual(greet("World"), "Hello, World!");
 });
