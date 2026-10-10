@@ -1,0 +1,46 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+nav ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #0b5fff;
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+}
+
+.skip-link:focus {
+  top: 14px;
+}
