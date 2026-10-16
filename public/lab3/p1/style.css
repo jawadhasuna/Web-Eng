@@ -1,0 +1,26 @@
+.btn-green {
+  color: green;
+}
+#box {
+  background-color: blue;
+}
+.heading {
+  color: red;
+}
+.center {
+  text-align: center;
+  text-transform: capitalize;
+}
+* {
+  font-family: "Times New Roman", serif;
+}
+.outer {
+  font-size: 1.5rem;
+}
+.inner {
+  font-size: 1.5rem;
+}
+.navbar {
+  background-color: #0f1111;
+  overflow: hidden;
+}
