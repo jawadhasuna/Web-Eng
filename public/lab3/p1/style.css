@@ -21,6 +21,122 @@
   font-size: 1.5rem;
 }
 .navbar {
+  height: 60px;
   background-color: #0f1111;
-  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #f08804;
+  font-size: 25px;
+}
+
+.search-box button {
+  background-color: #f08804;
+}
+.box-item {
+  width: 100px;
+  height: 100px;
+  border: 3px solid black; /* any visible border, e.g. 2px solid black */
+  opacity: 0.5;
+}
+
+.box-item:nth-child(1) {
+  background-color: yellow;
+}
+.box-item:nth-child(2) {
+  background-color: blue;
+}
+.box-item:nth-child(3) {
+  background-color: red;
+}
+
+.box-item:last-child {
+  border-radius: 50%;
+}
+.love-nature {
+  background-image: url("https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600");
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  right: 0;
+  z-index: 1000;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+.outer-flex {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-flex {
+  width: 50px;
+  height: 50px;
+  background-color: teal;
+  align-self: flex-start;
+}
+.media-box {
+  width: 150px;
+  height: 150px;
+}
+@media (max-width: 300px) {
+  .media-box {
+    background-color: green;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .media-box {
+    background-color: pink;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  .media-box {
+    background-color: red;
+  }
+}
+
+@media (min-width: 600px) {
+  .media-box {
+    background-color: blue;
+  }
+}
+
+.btn-green {
+  color: green;
+  transition:
+    font-size 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-green:hover {
+  font-size: 20px;
+  transform: rotate(10deg);
+}
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 8px solid #ccc;
+  border-top: 8px solid #0b5fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
