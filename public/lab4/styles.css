@@ -1,0 +1,191 @@
+@layer reset, base, components, utilities;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body,
+  h1,
+  h2,
+  p,
+  figure {
+    margin: 0;
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --space: 1rem;
+    --color-bg: light-dark(oklch(98% 0.01 255), oklch(20% 0.02 255));
+    --color-text: light-dark(oklch(25% 0.02 255), oklch(94% 0.01 255));
+    --color-accent: light-dark(oklch(45% 0.18 255), oklch(75% 0.12 255));
+    --color-surface: color-mix(
+      in oklch,
+      var(--color-bg) 92%,
+      var(--color-accent)
+    );
+    --color-border: color-mix(in oklch, var(--color-text) 55%, var(--color-bg));
+  }
+
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin: 0;
+    padding: var(--space);
+    background-color: var(--color-bg);
+  }
+
+  input,
+  textarea,
+  button {
+    font: inherit;
+  }
+
+  h1 {
+    color: var(--color-text);
+  }
+
+  a {
+    color: var(--color-accent);
+  }
+
+  svg {
+    color: var(--color-accent);
+  }
+}
+
+@layer components {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space);
+    padding-block-end: var(--space);
+    border-block-end: 1px solid var(--color-border);
+  }
+  figure {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #schedule {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space);
+    align-items: start;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 var(--space);
+  }
+
+  form button {
+    justify-self: start;
+  }
+
+  input:not([type="radio"]),
+  textarea {
+    inline-size: 100%;
+  }
+
+  @media (max-width: 40rem) {
+    #schedule,
+    form {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  main {
+    max-inline-size: 60rem;
+    margin-inline: auto;
+    padding-block: 1rem;
+  }
+
+  form p {
+    margin-block: 0.5rem 1rem;
+  }
+
+  button[type="submit"] {
+    color: var(--color-bg);
+    background: var(--color-accent);
+    border: none;
+    padding: 0.5rem 1rem;
+  }
+
+  button[type="submit"]:hover {
+    background: color-mix(in oklch, var(--color-accent), black 15%);
+  }
+
+  :where(nav ul li) a {
+    color: purple;
+  }
+
+  .nav-link {
+    color: darkgreen;
+  }
+
+  a[aria-current="location"] {
+    color: crimson;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+  }
+
+  tr.selected th,
+  tr.selected td {
+    background: color-mix(in oklch, var(--color-accent) 20%, var(--color-bg));
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 16px;
+    top: -60px;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    padding: 8px 12px;
+  }
+
+  .skip-link:focus {
+    top: 14px;
+  }
+}
+@layer utilities {
+  .text-muted {
+    color: color-mix(in oklch, var(--color-text) 60%, var(--color-bg));
+  }
+  .span-all {
+    grid-column: 1 / -1;
+  }
+}
